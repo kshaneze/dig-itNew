@@ -22,7 +22,7 @@ function HeroMobile() {
         <p>
           Z intenzivno spletno prisotnostjo, dvignemo prihodke vašega podjetja.
         </p>
-        <Link href='/informativno-ponudbo'>
+        <Link href='/informativna-ponudba'>
           <button className={`${classes.btn} ${classes.btnWhite}`}>
             PRIDOBITE INFORMATIVNO PONUDBO
           </button>

@@ -3,6 +3,8 @@ import React from 'react'
 import classes from './KajBosteDoseegliMobile.module.css'
 import Image from 'next/image'
 
+import Link from 'next/link'
+
 // import mainImage from '../../public/cat-mobile.webp'
 
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
@@ -68,12 +70,16 @@ function KajBosteDoseegliMobile() {
           <li>Višje pozicionirana spletna stran v iskalniku Google. </li>
         </ul>
 
+        <Link href='/informativna-ponudba'>
         <button className={`${classes.btn} ${classes.btnWhite}`}>
           PRIDOBITE INFORMATIVNO PONUDBO
         </button>
+        </Link>
+        <Link href='/brezplacna-analiza'>
         <button className={`${classes.btn} ${classes.btnYellow}`}>
           BREZPLAČNA SPLETNA ANALIZA
         </button>
+        </Link>
       </div>
     </section>
   )

@@ -65,16 +65,16 @@ function Header() {
                 <Image src='/fb-white.svg' alt='facebook social link icon' width={26} height={26}/>
               </Link>
               <Link href='https://www.instagram.com/digitslo/' target='blank'>
-                <Image src='/icon-instagram.svg' alt='instagram social link icon' width={26} height={26} />
+                <Image src='/Icon-instagram.svg' alt='instagram social link icon' width={26} height={26} />
               </Link>
               <Link
                 href='https://www.linkedin.com/company/di-git/'
                 target='blank'
               >
-                <Image src='/icon-linkedin.svg' alt='linkedin social link icon' width={26} height={26}/>
+                <Image src='/Icon-linkedin.svg' alt='linkedin social link icon' width={26} height={26}/>
               </Link>
               <Link href='https://www.tiktok.com/@digitagencija' target='blank'>
-                <Image src='/icon-tiktok.svg' alt='tiktok social link icon' width={26} height={26} />
+                <Image src='/Icon-tiktok.svg' alt='tiktok social link icon' width={26} height={26} />
               </Link>
             </li>
           </ul>
