@@ -71,8 +71,8 @@ export default function App({ Component, pageProps }) {
         </Script>
 
 
-        <Layout  className={quicksand.className}>
-        <Component {...pageProps} />
+        <Layout  >
+        <Component className={quicksand.className} {...pageProps} />
   </Layout>
   </>
   
