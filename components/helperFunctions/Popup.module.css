@@ -1,0 +1,189 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+}
+
+.popupContainer {
+  /* width: 40%; */
+  width: clamp(40%, 600px, 90%);
+  background: linear-gradient();
+  background: linear-gradient(to bottom right, #0c0918, #787292);
+  border: 1px solid white;
+  border-radius: 35px;
+  padding: 3% 2%;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 10000 !important;
+  /* animation: drop 0.5s ease-in-out; */
+}
+
+.popup::backdrop {
+  animation: drop 0.5s ease-in-out;
+}
+
+.popupContainer p:nth-child(1) {
+  font-size: 1.3vw;
+  margin-left: -13%;
+}
+.popupContainer p:nth-child(2) {
+  background-image: linear-gradient(to right, #ecc218, #f39d12);
+  background-clip: text;
+  background-size: 100%;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 3.6vw;
+  font-family: 'Crossbar';
+  margin-left: 0%;
+  padding-left: 2%;
+  transform: skew(0turn, -6deg);
+  font-weight: 400;
+  line-height: 5vw;
+  margin-top: -3%;
+}
+
+.popupContainer p:nth-child(3) {
+  font-weight: 100;
+  font-size: 1.1vw;
+  line-height: 1.6vw;
+  margin: 15px 0 25px 0;
+}
+
+.btn {
+  width: 29%;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding: 9.5px 12px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #f39d12, #ecc218);
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.popup .email {
+  background-color: transparent;
+  width: 69%;
+  color: white;
+  border-radius: 45px;
+  font-size: 1.1vw;
+  border: 1px solid white;
+  padding: 9.5px 12px;
+  font-weight: 300;
+  font-family: inherit;
+  margin-right: 2%;
+}
+
+.email::placeholder {
+  font-family: inherit;
+  font-weight: 300;
+  color: white;
+}
+
+.checkboxContainer {
+  font-size: 0.9vw;
+  font-weight: 300;
+  text-align: left;
+  padding: 15px 25px;
+}
+
+.checkboxContainer input {
+  margin: 0 10px;
+}
+
+.popup .closePopup {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 12000 !important;
+}
+
+.closePopup .lineOne {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  transform: rotate(43deg);
+  position: absolute;
+}
+
+.closePopup .lineTwo {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  transform: rotate(-43deg);
+  position: absolute;
+}
+
+/* @keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+} */
+
+@media screen and (max-width: 700px) {
+  .popupContainer p:nth-child(1) {
+    font-size: 4vw;
+    margin-left: -13%;
+  }
+  .popupContainer p:nth-child(2) {
+    font-size: 9.6vw;
+    line-height: 10vw;
+    margin-top: -1%;
+  }
+
+  .popupContainer p:nth-child(3) {
+    font-size: 3.2vw;
+    line-height: 4vw;
+  }
+
+  .btn {
+    font-size: 4vw;
+  }
+
+  .popup .email {
+    font-size: 3.9vw;
+    border: 1px solid white;
+    padding: 9.5px 12px;
+    font-weight: 300;
+    font-family: inherit;
+    margin-right: 2%;
+  }
+
+  .checkboxContainer {
+    font-size: 2.3vw;
+    font-weight: 300;
+    text-align: left;
+    line-height: 3vw;
+    padding: 15px 25px;
+  }
+
+  .checkboxContainer input {
+    margin: 0 10px;
+  }
+
+  .popup .closePopup {
+    right: 5%;
+    width: 30px;
+    height: 30px;
+  }
+}

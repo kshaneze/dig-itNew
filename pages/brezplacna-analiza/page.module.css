@@ -1,0 +1,160 @@
+.spletnaAnalizaSection {
+  width: 100%;
+  background: linear-gradient(to right, black, #221c46);
+  height: auto;
+  margin-top: -150px;
+  padding: 300px 10% 5% 10%;
+  color: white;
+  font-family: 'Quicksand';
+  /* margin-bottom: -400px; */
+  overflow-y: visible;
+}
+
+.spletnAnalizaContainer h1:nth-child(1) {
+  font-size: 2.5vw;
+  width: 25%;
+  font-weight: 500;
+}
+
+.spletnAnalizaContainer h1:nth-child(2) {
+  font-family: 'Crossbar';
+  font-size: 9vw;
+  font-weight: 300;
+  transform: skew(0turn, -5deg);
+  margin: -3% 0 15% 0;
+  letter-spacing: 10px;
+  text-shadow: -15px 25px 3px rgba(250, 250, 250, 0.109);
+}
+.textFormContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 13%;
+  margin-top: -7%;
+}
+
+.textFormContainer > div {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+.textFormContainer form {
+  font-size: 1.3vw;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  padding: 0 2%;
+}
+
+.textFormContainer form input {
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 40px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 1.4vw;
+  font-weight: 300;
+  font-family: inherit;
+}
+
+.textFormContainer form input:focus {
+  outline: none !important;
+  border: 2px solid #f39d12;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.checkboxContainer {
+  display: flex;
+  font-size: 0.9vw;
+  margin: 5px 0;
+}
+
+.checkboxContainer input {
+  margin-right: 20px;
+  margin-left: 30px;
+  width: 50px;
+  accent-color: #f39d12;
+  background-color: #719ece;
+}
+
+.btn {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding: 13.5px 15px;
+  border: none;
+  outline: none;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s all;
+  background: linear-gradient(to right, #f39d12, #ecc218);
+}
+
+@media screen and (max-width: 700px) {
+  .spletnaAnalizaSection {
+    margin-top: -100px;
+    padding: 150px 10% 5% 10%;
+  }
+
+  .spletnAnalizaContainer h1:nth-child(1) {
+    font-size: 5.3vw;
+    width: 100%;
+  }
+
+  .spletnAnalizaContainer h1:nth-child(2) {
+    font-size: 13vw;
+    transform: skew(0turn, -5deg);
+    margin: -1% 0 15% 0;
+    letter-spacing: 2px;
+    text-shadow: 5px 6px 3px rgba(250, 250, 250, 0.176);
+  }
+  .textFormContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 13%;
+    margin-top: -7%;
+  }
+
+  .textFormContainer > div {
+    font-size: 3.4vw;
+    font-weight: 400;
+    line-height: 4.7vw;
+  }
+
+  .textFormContainer form {
+    font-size: 3.3vw;
+    grid-gap: 10px;
+    padding: 0%;
+  }
+
+  .textFormContainer form input {
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 40px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 300;
+    font-family: inherit;
+  }
+
+  .checkboxContainer {
+    font-size: 2.3vw;
+  }
+
+  .checkboxContainer input {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 50px;
+    accent-color: #f39d12;
+    background-color: #719ece;
+  }
+
+  .btn {
+    font-size: 3.5vw;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin: 5% 0 50% 0;
+  }
+}

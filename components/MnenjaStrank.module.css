@@ -1,0 +1,69 @@
+.mnenjaSection {
+  /* background-color: rgb(10, 13, 31); */
+  padding: 5% 10%;
+  height: auto;
+}
+
+.mnenjaSection h1 {
+  color: white;
+  font-size: 3vw;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.mnenjaContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.messageContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.message {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+  width: 70%;
+  color: white;
+}
+
+.message > p:nth-child(1) {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.message > p:nth-child(2) {
+  font-weight: 300;
+}
+
+.messageBox {
+  width: 100%;
+  filter: brightness(3.6) opacity(1);
+}
+
+@media screen and (max-width: 700px) {
+  .mnenjaSection {
+    margin-top: 7%;
+  }
+  .mnenjaSection h1 {
+    font-size: 6vw;
+    margin-bottom: 17px;
+  }
+
+  .message {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.3vw;
+    width: 80%;
+  }
+
+  .message > p:nth-child(1) {
+    margin-bottom: 6px;
+  }
+}

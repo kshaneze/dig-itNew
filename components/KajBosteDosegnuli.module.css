@@ -1,0 +1,96 @@
+.kajBosteDosegnuliContainer {
+  /* background-color: rgb(10, 13, 31); */
+  margin-top: 20%;
+}
+
+.kajBosteDosegnuliContainer h1 {
+  color: white;
+  font-size: 2.5vw;
+  font-weight: 400;
+  z-index: 10;
+  width: 51%;
+  padding: 0 15%;
+}
+
+.kajBosteDosegnuliContainer > div {
+  width: 70%;
+  margin: 0 10% 0 10%;
+  position: relative;
+  margin-top: -10%;
+}
+
+.imageContainer > p {
+  position: absolute;
+  color: white;
+  width: 20%;
+  text-align: right;
+  font-size: 1.1vw;
+  font-weight: 300;
+}
+
+.imageContainer > p:nth-child(1) {
+  top: 30%;
+  left: 9%;
+}
+
+.imageContainer > p:nth-child(2) {
+  top: 45%;
+  left: 9%;
+}
+
+.imageContainer > p:nth-child(3) {
+  top: 58%;
+  left: 9%;
+}
+
+.imageContainer > p:nth-child(5) {
+  top: 30%;
+  right: -6%;
+  text-align: left;
+}
+
+.imageContainer > p:nth-child(6) {
+  top: 45%;
+  right: -6%;
+  text-align: left;
+}
+
+.imageContainer > p:nth-child(7) {
+  top: 58%;
+  right: -6%;
+  text-align: left;
+}
+
+.kajBosteDosegnuliContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  width: 35%;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding: 13.5px 15px;
+  border: none;
+  outline: none;
+  border-radius: 45px;
+  cursor: pointer;
+  /* transition: 0.3s all; */
+  position: absolute;
+  left: 2%;
+  bottom: 27%;
+}
+
+.btnYellow {
+  background: linear-gradient(to right, #f39d12, #ecc218);
+  bottom: 20%;
+}
+
+@media screen and (max-width: 700px) {
+  .kajBosteDosegnuliContainer {
+    /* background-color: rgb(10, 13, 31); */
+    margin-top: 80%;
+    display: none;
+  }
+}

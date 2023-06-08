@@ -1,0 +1,85 @@
+.statistikaContainer {
+  /* background-color: rgb(10, 13, 31); */
+  padding: 20% 0 10% 0;
+  position: relative;
+}
+
+.statistikaContainer img {
+  position: absolute;
+  top: 0;
+  right: -15px;
+}
+
+.statistikaGrid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.circle {
+  padding: 2%;
+  border: 2px solid rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.545);
+  border-radius: 50%;
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+.number {
+  font-size: 4vw;
+}
+
+.numberOrange {
+  color: #f2a012;
+}
+.numberYellow {
+  color: #ffe607 !important;
+}
+
+.numberBlack {
+  color: black;
+}
+
+.yellowCloud {
+  width: 35%;
+  height: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .statistikaGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+    grid-gap: 30px;
+  }
+
+  .circle {
+    width: 35vw;
+    height: 35vw;
+    font-size: 4vw;
+  }
+
+  .number {
+    font-size: 10vw;
+  }
+
+  .statistikaContainer img {
+    top: 160px;
+    right: -15px;
+  }
+
+  .yellowCloud {
+    width: 58%;
+    height: auto;
+  }
+}

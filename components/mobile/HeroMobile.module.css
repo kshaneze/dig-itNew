@@ -1,0 +1,89 @@
+/* #1b1638 */
+
+.imageContainer {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  display: none;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  z-index: 0;
+}
+
+.mainContentContainer {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainContentContainer img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mainContentContainer > p {
+  color: white;
+  font-weight: 300;
+  font-size: 5vw;
+}
+
+.btn {
+  width: 78%;
+  text-transform: uppercase;
+  font-size: 3.2vw;
+  font-weight: 300;
+  padding: 7px 20px;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s all;
+  position: relative;
+  z-index: 100;
+}
+
+.btnWhite:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btnWhite {
+  background-color: white;
+  color: black;
+}
+
+.btnBorder {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.btnBorder:hover {
+  background-color: white;
+  color: black;
+}
+
+.circleSection {
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(10, 13, 31); */
+  height: 70vh;
+}
+
+@media screen and (max-width: 700px) {
+  .imageContainer {
+    display: block;
+  }
+}

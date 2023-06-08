@@ -1,0 +1,74 @@
+.digitEkipaSection {
+  /* background-color: #1b1638; */
+  padding: 5% 10%;
+  height: auto;
+}
+
+.ekipaContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10%;
+}
+
+.ekipaContainer h1 {
+  font-family: 'Crossbar';
+  font-size: 13vw;
+  font-weight: 300;
+  text-shadow: 16px -62px 5px rgba(250, 250, 250, 0.5);
+  transform: skew(0turn, -11deg);
+  margin: -7% 0 15% 0;
+  color: #171330;
+}
+
+.ekipaBox1 img {
+  width: 100%;
+  height: auto;
+}
+
+.ekipaBox1 p {
+  font-weight: 300;
+  font-size: 1.3vw;
+}
+
+.ekipaBox2 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 700px) {
+  .digitEkipaSection {
+    /* background-color: #1b1638; */
+    padding: 5% 10%;
+    height: auto;
+    margin-top: 27%;
+  }
+
+  .ekipaContainer {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .ekipaContainer h1 {
+    font-size: 37vw;
+    text-shadow: 5px -22px 3px rgba(250, 250, 250, 0.5);
+    margin: -12% 0 12% 2%;
+  }
+
+  .ekipaBox1 img {
+    width: 80%;
+  }
+
+  .ekipaBox1 p {
+    font-size: 4vw;
+  }
+
+  .ekipaBox2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

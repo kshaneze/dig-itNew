@@ -2,15 +2,27 @@
   "name": "digit-working",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.dig-it.si",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node server.js",
+    "export": "next export"
   },
   "dependencies": {
+    "framer-motion": "^10.12.2",
+    "keen-slider": "^6.8.5",
     "next": "13.4.4",
+    "nodemailer": "^6.9.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.4.3",
+    "sharp": "^0.32.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.37",
+    "typescript": "5.0.4"
   }
 }

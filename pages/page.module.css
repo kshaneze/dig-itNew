@@ -1,0 +1,94 @@
+.pageContainer {
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(rgb(10, 13, 31) 30%, rgb(137, 142, 171));
+}
+
+/* #1b1638 */
+
+.imageContainer {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -150px;
+  position: relative;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.mainContentContainer {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mainContentContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: -10%;
+}
+
+.mainContentContainer > p {
+  color: white;
+  font-weight: 300;
+  font-size: 1.4vw;
+}
+
+.btn {
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding: 13.5px 15px;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btnWhite {
+  background-color: white;
+  color: black;
+}
+
+.btnBorder {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.btnBorder:hover {
+  background-color: white;
+  color: black;
+}
+
+.circleSection {
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(10, 13, 31); */
+  height: 70vh;
+}
+
+@media screen and (max-width: 700px) {
+  .imageContainer {
+    display: none;
+  }
+}
