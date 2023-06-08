@@ -5,7 +5,7 @@ import classes from './KajBosteDosegnuli.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import mainImage from '../public/macka-phone.webp'
+// import mainImage from '../public/macka-phone.webp'
 
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -52,7 +52,7 @@ function KajBosteDosegnuli() {
         <p>Uporabniki se dlje časa zadržijo na spletni strani.</p>
         <p>Več oddanih povpraševanj in spletnih nakupov. </p>
         <Image
-          src={mainImage}
+          src='/macka-phone.webp'
           alt='landing photo declaring our digit webiste'
           width={900}
           height={740}

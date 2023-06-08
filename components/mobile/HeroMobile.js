@@ -4,21 +4,21 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Hero from '../../public/hero-image--phone.webp'
-import Logo from '../../public/footer-logo.svg'
+// import Hero from '../../public/hero-image--phone.webp'
+// import Logo from '../../public/footer-logo.svg'
 
 function HeroMobile() {
   return (
     <div className={classes.imageContainer}>
       <Image
-        src={Hero}
+        src='/hero-image--phone.webp'
         alt='big landing image containing cat and text our team'
         priority={true}
         width={1080}
         height={3092}
       />
       <div className={classes.mainContentContainer}>
-        <Image src={Logo} alt='digit logo' />
+        <Image src='/footer-logo.svg' width={100} height={100} alt='digit logo' />
         <p>
           Z intenzivno spletno prisotnostjo, dvignemo prihodke vašega podjetja.
         </p>

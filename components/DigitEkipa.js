@@ -2,8 +2,8 @@
 import classes from './DigitEkipa.module.css'
 
 import Image from 'next/image'
-import digItLogo from '../public/digit-logo-final.svg'
-import ekipa from '../public/ekipa-digit.webp'
+// import digItLogo from '../public/digit-logo-final.svg'
+// import ekipa from '../public/ekipa-digit.webp'
 
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -43,7 +43,7 @@ function DigitEkipa() {
     <section className={classes.digitEkipaSection} id='ekipa' ref={ref}>
       <motion.div className={classes.ekipaContainer} animate={animation}>
         <div className={classes.ekipaBox1}>
-          <Image src={digItLogo} alt='digit logo' />
+          <Image src='/digit-logo-final.svg' width={200} height={200} alt='digit logo' />
           <h1>EKIPA</h1>
           <p>
             Smo ekipa strokovnjakov za digitalni marketing, ki svoje delo
@@ -53,7 +53,7 @@ function DigitEkipa() {
           </p>
         </div>
         <div className={classes.ekipaBox2}>
-          <Image src={ekipa} alt='dig-it ekipa ilustration agency' />
+          <Image src='/ekipa-digit.webp' width={500} height={400} alt='dig-it ekipa ilustration agency' />
         </div>
       </motion.div>
     </section>

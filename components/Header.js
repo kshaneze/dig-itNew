@@ -3,9 +3,9 @@ import classes from './Header.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import Logo from '/public/asc.svg'
-import Fb from '/public/fb-white.svg'
-import socialInstagram from '/public/icon-instagram.svg'
+// import Logo from '/public/asc.svg'
+// import Fb from '/public/fb-white.svg'
+// import socialInstagram from '/public/icon-instagram.svg'
 // import socialTiktok from '/public/icon-tiktok.svg'
 // import socialLinkedin from '/public/icon-linkedin.svg'
 
@@ -43,10 +43,11 @@ function Header() {
         <div className={classes.logoDiv}>
           <Link href='/'>
             <Image
-              src={Logo}
+              src='/asc.svg'
               width={100}
               alt='logo digit'
               className={classes.logo}
+              height={100}
             />
           </Link>
         </div>
@@ -61,10 +62,10 @@ function Header() {
             </li>
             <li className={classes.socials}>
               <Link href='https://www.facebook.com/digitslo/' target='blank'>
-                <Image src={Fb} alt='facebook social link icon' />
+                <Image src='/fb-white.svg' alt='facebook social link icon' width={26} height={26}/>
               </Link>
               <Link href='https://www.instagram.com/digitslo/' target='blank'>
-                <Image src={socialInstagram} alt='instagram social link icon' />
+                <Image src='/icon-instagram.svg' alt='instagram social link icon' width={26} height={26} />
               </Link>
               <Link
                 href='https://www.linkedin.com/company/di-git/'

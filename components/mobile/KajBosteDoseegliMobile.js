@@ -3,7 +3,7 @@ import React from 'react'
 import classes from './KajBosteDoseegliMobile.module.css'
 import Image from 'next/image'
 
-import mainImage from '../../public/cat-mobile.webp'
+// import mainImage from '../../public/cat-mobile.webp'
 
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -54,7 +54,7 @@ function KajBosteDoseegliMobile() {
       </motion.div>
       <motion.div className={classes.imageContainer} animate={animation}>
         <Image
-          src={mainImage}
+          src='/cat-mobile.webp'
           alt='ilustration of cat combined wtih phone and text'
           width={1224}
           height={1273}

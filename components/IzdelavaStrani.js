@@ -3,7 +3,7 @@ import React from 'react'
 import classes from './IzdelavaStrani.module.css'
 
 import Image from 'next/image'
-import laptop from '../public/laptop.webp'
+// import laptop from '../public/laptop.webp'
 import SquaresIzdelava from './helperFunctions/SquaresIzdelava'
 
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
@@ -72,8 +72,8 @@ function IzdelavaStrani() {
           <p>Spletno stran grafično oblikujemo po vaših željah</p>
         </div>
 
-        <Image src={laptop} alt='laptop by digit' />
-      </motion.div>
+        <Image src='/laptop.webp' width={500} height={400} alt='laptop by digit' />
+      </motion.div> 
     </div>
   )
 }

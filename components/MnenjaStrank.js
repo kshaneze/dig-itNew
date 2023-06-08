@@ -64,9 +64,11 @@ function MnenjaStrank() {
           <div className='keen-slider__slide number-slide1'>
             <div className={classes.messageContainer}>
               <Image
-                src={box}
+                src='/message-box.svg'
                 className={classes.messageBox}
                 alt='message box'
+                width={400}
+                height={300}
               />
 
               <div className={classes.message}>
@@ -84,9 +86,12 @@ function MnenjaStrank() {
             <div className={classes.messageContainer}>
               
               <Image
-                src={box}
+                src='/message-box.svg'
                 className={classes.messageBox}
                 alt='message box'
+                width={400}
+
+                height={300}
               />
 
               <div className={classes.message}>

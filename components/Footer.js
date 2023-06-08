@@ -7,8 +7,8 @@ import Link from 'next/link'
 
 import Image from 'next/image'
 import footerLogo from '../public/footer-logo.svg'
-import socialfb from '../public/fb-white.svg'
-import socialInstagram from '../public/icon-instagram.svg'
+// import socialfb from '../public/fb-white.svg'
+// import socialInstagram from '../public/icon-instagram.svg'
 // import socialTiktok from '../public/icon-tiktok.svg'
 // import socialLinkedin from '../public/icon-linkedin.svg'
 
@@ -31,7 +31,7 @@ function Footer() {
       <div className={classes.footerGrid}>
         <div className={classes.footerBox1}>
           <div>
-            <Image src={footerLogo} alt='website footer logo' />
+            <Image src='/footer-logo.svg' alt='website footer logo' width={200} height={100} />
             <p>DIG-IT d.o.o.</p>
             <p>
               Gospodinjska ulica 8,
@@ -42,7 +42,7 @@ function Footer() {
 
           <div>
             <div>
-              <Image src={footerLogo} alt='website footer logo' />
+              <Image src='/footer-logo.svg' alt='website footer logo' width={100} height={100}/>
               <p>041 332 324 </p>
               <p>info@dig-it.si</p>
             </div>
@@ -80,10 +80,10 @@ function Footer() {
                 target='blank'
                 className={classes.fb}
               >
-                <Image src={socialfb} alt='facebook social link icon' />
+                <Image src='/fb-white.svg' alt='facebook social link icon' width={26} height={26} />
               </Link>
               <Link href='https://www.instagram.com/digitslo/' target='blank'>
-                <Image src={socialInstagram} alt='instagram social link icon' />
+                <Image src='/icon-instagram.svg' alt='instagram social link icon' width={26} height={26}/>
               </Link>
               <Link
                 href='https://www.linkedin.com/company/di-git/'
