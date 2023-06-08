@@ -60,7 +60,7 @@ function KajBosteDosegnuli() {
         <p>Večja vključenost, doseg in prisotnost na družbenih medijih. </p>
         <p>Kreativni oglasi, ki vašemu podjetju prinesejo zaslužek. </p>
         <p>Višje pozicionirana spletna stran v iskalniku Google. </p>
-        <Link href='/informativno-ponudbo'>
+        <Link href='/informativna-ponudba'>
           <motion.button
             className={`${classes.btn} ${classes.btnWhite}`}
             whileHover={{ scale: 1.1 }}

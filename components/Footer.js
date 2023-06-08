@@ -42,7 +42,7 @@ function Footer() {
 
           <div>
             <div>
-              <Image src='/footer-logo.svg' alt='website footer logo' width={100} height={100}/>
+              <Image src='/footer-logo.svg' alt='website footer logo' width={200} height={130}/>
               <p>041 332 324 </p>
               <p>info@dig-it.si</p>
             </div>
@@ -95,7 +95,7 @@ function Footer() {
                 <Image src='/icon-tiktok.svg' alt='tiktok social link icon' width={26} height={26}/>
               </Link>
             </div>
-            <Link href='/informativno-ponudbo'>
+            <Link href='/informativna-ponudba'>
               <motion.button
                 className={`${classes.btn} ${classes.btnWhite}`}
                 whileHover={{ scale: 1.1 }}

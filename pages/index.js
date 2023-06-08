@@ -34,6 +34,12 @@ const PageLayoutHolder = dynamic(() =>
 
 export default function Home() {
   return (
+    <>
+      <Head>
+      <title>Dig-it agencija</title>
+
+      </Head>
+   
      
    <main className={`${styles.pageContainer}`}>
   
@@ -51,7 +57,7 @@ export default function Home() {
         Z intenzivno spletno prisotnostjo, dvignemo prihodke vašega
         podjetja.
       </p>
-      <Link href='/informativno-ponudbo'>
+      <Link href='/informativna-ponudba'>
         <button className={`${styles.btn} ${styles.btnhite}`}>
           PRIDOBITE INFORMATIVNO PONUDBO
         </button>
@@ -87,6 +93,7 @@ export default function Home() {
   <PageLayoutHolder />
 
 </main>
+ </>
 
   )
 }

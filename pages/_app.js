@@ -20,6 +20,8 @@ const quicksand = Quicksand({
 
 
 
+
+
 export default function App({ Component, pageProps }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -61,19 +63,28 @@ export default function App({ Component, pageProps }) {
           }}
         ></Script>
 
-      <Script strategy='lazyOnLoad' src="https://www.googletagmanager.com/gtag/js?id=G-KNKMB0ZK24"/>
+      {/* <Script strategy='lazyOnLoad' src="https://www.googletagmanager.com/gtag/js?id=G-KNKMB0ZK24"/>
         <Script strategy='lazyOnLoad' id='ga-script'>
       {`
+      
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);} 
         gtag('js', new Date());
-        gtag('config', 'G-KNKMB0ZK24');`}
-        </Script>
+        gtag('config', 'G-KNKMB0ZK24');
 
+      `}
+        </Script> */}
+
+
+
+
+        <main className={quicksand.className}>
 
         <Layout  >
-        <Component className={quicksand.className} {...pageProps} />
+        <Component {...pageProps} />
   </Layout>
+
+  </main>
   </>
   
 }

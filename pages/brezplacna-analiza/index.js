@@ -9,6 +9,7 @@ const quicksand = Quicksand({
   weight: ['variable'],
 })
 
+import Head from 'next/head'
 import Squares from '../../components/helperFunctions/SquaresLanding'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -93,6 +94,11 @@ function Page() {
   };
 
   return (
+    <>
+      <Head>
+        <title>Prezplacna analiza</title>
+      </Head>
+    
     <div className={`${classes.spletnaAnalizaSection} ${quicksand.className}`}>
       <motion.div
         className={classes.spletnAnalizaContainer}
@@ -148,6 +154,7 @@ function Page() {
         </div>
       </motion.div>
     </div>
+    </>
   )
 }
 

@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Quicksand } from 'next/font/google'
 // import * as fbq from '../lib/fpixel'
 
+import Head from 'next/head'
+
 
 const quicksand = Quicksand({
   subsets: ['latin'],
@@ -42,7 +44,11 @@ function Page() {
 
   return (
 
-    
+    <>
+      <Head>
+      <title>Informativna ponudba</title>
+
+      </Head>
     <div className={`${classes.spletnaAnalizaSection} ${quicksand.className}`}>
       <motion.div
         className={classes.spletnAnalizaContainer}
@@ -149,6 +155,8 @@ function Page() {
         </form>
       </motion.div>
     </div>
+    </>
+
   )
 }
 
