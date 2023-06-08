@@ -9,8 +9,8 @@ import Image from 'next/image'
 import footerLogo from '../public/footer-logo.svg'
 import socialfb from '../public/fb-white.svg'
 import socialInstagram from '../public/icon-instagram.svg'
-import socialTiktok from '../public/icon-tiktok.svg'
-import socialLinkedin from '../public/icon-linkedin.svg'
+// import socialTiktok from '../public/icon-tiktok.svg'
+// import socialLinkedin from '../public/icon-linkedin.svg'
 
 import { motion } from 'framer-motion'
 
@@ -89,10 +89,10 @@ function Footer() {
                 href='https://www.linkedin.com/company/di-git/'
                 target='blank'
               >
-                <Image src={socialLinkedin} alt='linkedin social link icon' />
+                <Image src='/icon-linkedin.svg' alt='linkedin social link icon' width={26} height={26} />
               </Link>
               <Link href='https://www.tiktok.com/@digitagencija' target='blank'>
-                <Image src={socialTiktok} alt='tiktok social link icon' />
+                <Image src='/icon-tiktok.svg' alt='tiktok social link icon' width={26} height={26}/>
               </Link>
             </div>
             <Link href='/informativno-ponudbo'>

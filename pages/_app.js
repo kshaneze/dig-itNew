@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
+import { Quicksand } from 'next/font/google'
 
 import * as fbq from '../lib/fpixel'
 // import * as ga from '../lib/index'
@@ -11,12 +12,19 @@ import { useEffect } from 'react'
 import Script  from 'next/script'
 
 
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: ['variable'],
+})
+
+
+
 
 export default function App({ Component, pageProps }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-
+  
 
   useEffect(() => {
     // This pageview only triggers the first time (it's important for Pixel to have real information)
@@ -63,8 +71,8 @@ export default function App({ Component, pageProps }) {
         </Script>
 
 
-        <Layout >
-    <Component {...pageProps} />
+        <Layout  className={quicksand.className}>
+        <Component {...pageProps} />
   </Layout>
   </>
   

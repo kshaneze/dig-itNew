@@ -1,7 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import { FB_PIXEL_ID } from '../lib/fpixel'
 
+
 export default function Document() {
+
+
+
+
   return (
     <Html lang="en">
       <Head>
