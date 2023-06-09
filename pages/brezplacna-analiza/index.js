@@ -12,6 +12,8 @@ const quicksand = Quicksand({
 import Head from 'next/head'
 import Squares from '../../components/helperFunctions/SquaresLanding'
 import { motion, AnimatePresence } from 'framer-motion'
+import toast, { Toaster } from "react-hot-toast";
+
 
 function Page() {
   const [website, setWebsite] = useState('')
@@ -81,15 +83,15 @@ function Page() {
       console.log(res.status);
 
       if (res) {
-        // toast.success("Sporočilo je uspešno poslano!");
+        toast.success("Sporočilo je uspešno poslano!");
         setEmail("");
         setPhone("");
         setWebsite("");
       } else {
-        // toast.error("Prišlo je do napake.");
+        toast.error("Prišlo je do napake.");
       }
     } else {
-      // toast.error("Prazna polja!");
+      toast.error("Prazna polja!");
     }
   };
 
@@ -98,6 +100,8 @@ function Page() {
       <Head>
         <title>Prezplacna analiza</title>
       </Head>
+      <Toaster />
+
     
     <div className={`${classes.spletnaAnalizaSection} ${quicksand.className}`}>
       <motion.div

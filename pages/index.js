@@ -48,8 +48,8 @@ export default function Home() {
       src={Hero}
       alt='big landing image containing cat and text our team'
       priority={true}
-      width={1915}
-      height={1523}
+      width={1000}
+      height={800}
     />
     <div className={styles.mainContentContainer}>
       <Image src={Logo} alt='digit logo' priority={true} />

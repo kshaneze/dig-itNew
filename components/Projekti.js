@@ -57,8 +57,8 @@ function Projekti() {
         src={leftCloud}
         className={classes.cloudLeft}
         alt='yellow cloud'
-        width={668}
-        height={919}
+        width={300}
+        height={400}
       />
 
       <motion.div className={classes.projektiContainer} animate={animation}>
@@ -93,9 +93,13 @@ function Projekti() {
 
         <div className={classes.project}>
           <div className={classes.imageContainer}>
-          <video autoPlay muted loop>
-        <source src="/promovideo.mp4" />
-      </video>
+
+
+          {inView && <video autoPlay muted loop>
+                       <source src="/promovideo.mp4" />
+                     </video>
+          }
+
           </div>
           <p>Infraslim: izdelava promovidea</p>
         </div>

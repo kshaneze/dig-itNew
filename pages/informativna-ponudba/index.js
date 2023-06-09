@@ -2,9 +2,12 @@
 
 import React from 'react'
 import classes from './page.module.css'
+import { useState } from 'react'
 
 import Squares from '../../components/helperFunctions/SquaresLanding'
 import { motion, AnimatePresence } from 'framer-motion'
+
+import toast, { Toaster } from "react-hot-toast";
 
 import { Quicksand } from 'next/font/google'
 // import * as fbq from '../lib/fpixel'
@@ -18,9 +21,68 @@ const quicksand = Quicksand({
 })
 
 function Page() {
-  const analizaFormSubmition = (e) => {
-    e.preventDefault()
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [spletnaStran, setSpletnaStran] = useState('')
+  const [spletnaTrgovina, setSpletnaTrgovina] = useState('')
+  const [seo, setSeo] = useState('')
+  const [vodenjeDružabnihProfilov, setVodenjeDružabnihProfilov] = useState('')
+  const [tiskopisje, setTiskopisje] = useState('')
+  const [fotografiranje, setFotografiranje] = useState('')
+  const [organizacijaDogodkov, setOrganizacijaDogodkov] = useState('')
+  const [videoProdukcija, setVideoProdukcija] = useState('')
+  const [graficnoOblikovanje, setGraficnoOblikovanje] = useState('')
+
+
+
+
+  const emailInputHandler = (e) => {
+    setEmail(e.target.value)
   }
+
+  const phoneInputHandler = (e) => {
+    setPhone(e.target.value)
+  }
+
+  const spletnaStranHandler = (e) => {
+    setSpletnaStran(e.target.value)
+  }
+
+
+  const spletnaTrgovinaHandler = (e) => {
+    setSpletnaTrgovina(e.target.value)
+  } 
+  
+  const seoHandler = (e) => {
+    setSeo(e.target.value)
+  } 
+  
+  
+  const vodenjeDružabnihProfilovHandler = (e) => {
+    setVodenjeDružabnihProfilov(e.target.value)
+  } 
+  
+  const tiskopisjeHandler = (e) => {
+    setTiskopisje(e.target.value)
+  } 
+  
+  const fotografiranjeHandler = (e) => {
+    setFotografiranje(e.target.value)
+  } 
+  
+  const organizacijaDogodkovHandler = (e) => {
+    setOrganizacijaDogodkov(e.target.value)
+  }
+
+  const videoProdukcijaHandler = (e) => {
+    setVideoProdukcija(e.target.value)
+  }
+
+  const graficnoOblikovanjeHandler = (e) => {
+    setGraficnoOblikovanje(e.target.value)
+  }
+  
+
 
   const dropIn = {
     hidden: {
@@ -40,6 +102,66 @@ function Page() {
     exit: { y: '-500px', opacity: 0 },
   }
 
+
+  const sendHandler = async (e) => {
+    e.preventDefault()
+    const sendMessage = {
+      mail: email,
+      tel: phone,
+      zanimaMe: {
+        spletnaStran: spletnaStran,
+        spletnaTrgovina: spletnaTrgovina,
+        seo: seo,
+        vodenjeDružabnihProfilov: vodenjeDružabnihProfilov,
+        tiskopisje: tiskopisje,
+        fotografiranje: fotografiranje,
+        organizacijaDogodkov: organizacijaDogodkov,
+        videoProdukcija: videoProdukcija,
+        graficnoOblikovanje: graficnoOblikovanje
+
+      }
+    };
+
+    if (
+      sendMessage.mail !== "" &&
+      sendMessage.tel !== ""  &&
+      sendMessage.zanimaMe !== ""
+
+    ) {
+      const req = await fetch("/api/contactPonudba", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "post",
+        body: JSON.stringify(sendMessage),
+      });
+
+      const res = await req.json();
+
+      console.log(res.status);
+
+      if (res) {
+        toast.success("Sporočilo je uspešno poslano!");
+        setEmail("");
+        setPhone("");
+        setSpletnaStran('')
+        setSpletnaTrgovina('')
+        setSeo('')
+        setTiskopisje('')
+        setFotografiranje('')
+        setVideoProdukcija('')
+        setVodenjeDružabnihProfilov('')
+        setGraficnoOblikovanje('')
+        setOrganizacijaDogodkov('')
+      } else {
+        toast.error("Prišlo je do napake.");
+      }
+    } else {
+      toast.error("Prazna polja!");
+    }
+  };
+
+
   
 
   return (
@@ -49,6 +171,7 @@ function Page() {
       <title>Informativna ponudba</title>
 
       </Head>
+      <Toaster />
     <div className={`${classes.spletnaAnalizaSection} ${quicksand.className}`}>
       <motion.div
         className={classes.spletnAnalizaContainer}
@@ -63,15 +186,15 @@ function Page() {
         <p className={classes.sodelovanje}>Začnimo sodelovanje!</p>
         <Squares />
 
-        <form>
+        <form onSubmit={sendHandler}>
           <div className={classes.textFormContainer}>
             <div>
               <p>
                 Pošljite nam povpraševanje in prejeli boste neobvezujočo ponudbo
                 za izboljševanje vaše spletne prisotnosti.
               </p>
-              <input type='text' placeholder='e-naslov'></input>
-              <input type='tel' placeholder='telefon'></input>
+              <input type='text' placeholder='e-naslov' onChange={emailInputHandler} value={email}></input>
+              <input type='tel' placeholder='telefon' onChange={phoneInputHandler} value={phone}></input>
               <div className={classes.checkboxContainer}>
                 <input type='checkbox' id='scales' name='scales' />
                 <span className={classes.checkmark}></span>
@@ -88,63 +211,63 @@ function Page() {
               <div className={classes.zanimaMeOptions}>
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={spletnaStranHandler} value='spletna stran' />
                     <span>spletna stran</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={spletnaTrgovinaHandler} value='spletna trgovina' />
                     <span>spletna trgovina</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={seoHandler}  value='SEO'/>
                     <span>SEO</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={vodenjeDružabnihProfilovHandler} value='vodenje družabnih profilov' />
                     <span>vodenje družabnih profilov</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={tiskopisjeHandler} value='tiskopisje' />
                     <span>tiskopisje</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={fotografiranjeHandler} value='fotografiranje'/>
                     <span>fotografiranje</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={organizacijaDogodkovHandler} value='organizacija dogodkov' />
                     <span>organizacija dogodkov</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' onChange={videoProdukcijaHandler} value='video produkcija' />
                     <span>video produkcija</span>
                   </label>
                 </div>
 
                 <div className={classes.ckButton} id='ck-button'>
                   <label>
-                    <input type='checkbox' value='1' />
+                    <input type='checkbox' value='grafično oblikovanje' onChange={graficnoOblikovanjeHandler} />
                     <span>grafično oblikovanje</span>
                   </label>
                 </div>

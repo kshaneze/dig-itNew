@@ -14,8 +14,8 @@ function HeroMobile() {
         src='/hero-image--phone.webp'
         alt='big landing image containing cat and text our team'
         priority={true}
-        width={300}
-        height={600}
+        width={200}
+        height={400}
       />
       <div className={classes.mainContentContainer}>
         <Image src='/footer-logo.svg' width={100} height={100} alt='digit logo' />

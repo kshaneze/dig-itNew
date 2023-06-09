@@ -58,8 +58,8 @@ function KajBosteDoseegliMobile() {
         <Image
           src='/cat-mobile.webp'
           alt='ilustration of cat combined wtih phone and text'
-          width={300}
-          height={300}
+          width={120}
+          height={130}
         />
       </motion.div>
 

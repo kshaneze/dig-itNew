@@ -54,8 +54,8 @@ function KajBosteDosegnuli() {
         <Image
           src='/macka-phone.webp'
           alt='landing photo declaring our digit webiste'
-          width={900}
-          height={740}
+          width={400}
+          height={500}
         />
         <p>Večja vključenost, doseg in prisotnost na družbenih medijih. </p>
         <p>Kreativni oglasi, ki vašemu podjetju prinesejo zaslužek. </p>

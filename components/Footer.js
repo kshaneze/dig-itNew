@@ -23,7 +23,7 @@ function Footer() {
       style={{
         background:
           pathname == '/brezplacna-analiza' ||
-          pathname == '/informativno-ponudbo'
+          pathname == '/informativna-ponudba'
             ? 'linear-gradient(to right, black, #221c46)'
             : 'linear-gradient( rgb(137, 142, 171), rgb(137, 142, 165))',
       }}

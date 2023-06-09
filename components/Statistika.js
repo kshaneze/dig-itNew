@@ -48,8 +48,8 @@ function Statistika() {
           src={yellowCloud}
           className={classes.yellowCloud}
           alt='yellow cloud '
-          width={668}
-          height={919}
+          width={300}
+          height={400}
         />
         <motion.div
           className={classes.statistikaGrid}
