@@ -4,7 +4,16 @@ const main = async (message) => {
   const htmlMessage = `
                          <h2>Telefonska številka: ${message.tel}</h2>
                          <h2>E-mail: ${message.mail}</h2>
-                         <h2>Zanima me: ${message.zanimaMe.spletnaStran},${message.zanimaMe.spletnaTrgovina},${message.zanimaMe.seo},${message.zanimaMe.vodenjeDružabnihProfilov},${message.zanimaMe.tiskopisje},${message.zanimaMe.fotografiranje},${message.zanimaMe.organizacijaDogodkov},${message.zanimaMe.videoProdukcija},${message.zanimaMe.graficnoOblikovanje}, </h2><br>
+                         <h2>Zanima me: ${message.zanimaMe.spletnaStran}<br>
+                         ${message.zanimaMe.spletnaTrgovina}<br>
+                         ${message.zanimaMe.seo}<br>
+                         ${message.zanimaMe.vodenjeDružabnihProfilov}<br>
+                         ${message.zanimaMe.tiskopisje}<br>
+                         ${message.zanimaMe.fotografiranje}<br>
+                         ${message.zanimaMe.organizacijaDogodkov}<br>
+                         ${message.zanimaMe.videoProdukcija}<br>
+                         ${message.zanimaMe.graficnoOblikovanje} </h2><br>
+                         <h2>${message.soglasam}</h2>
                          `
   const transporter = nodemailer.createTransport({
     host: 'mail.dig-it.si',

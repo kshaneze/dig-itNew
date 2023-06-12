@@ -31,7 +31,12 @@ function Footer() {
       <div className={classes.footerGrid}>
         <div className={classes.footerBox1}>
           <div>
-            <Image src='/footer-logo.svg' alt='website footer logo' width={200} height={100} />
+            <Image
+              src='/footer-logo.svg'
+              alt='website footer logo'
+              width={200}
+              height={100}
+            />
             <p>DIG-IT d.o.o.</p>
             <p>
               Gospodinjska ulica 8,
@@ -42,7 +47,12 @@ function Footer() {
 
           <div>
             <div>
-              <Image src='/footer-logo.svg' alt='website footer logo' width={200} height={130}/>
+              <Image
+                src='/footer-logo.svg'
+                alt='website footer logo'
+                width={200}
+                height={130}
+              />
               <p>041 332 324 </p>
               <p>info@dig-it.si</p>
             </div>
@@ -53,22 +63,22 @@ function Footer() {
           <div className={classes.box1}>
             <div>
               <p>
-                <a href='#ekipa'>o nas</a>
+                <a href='https://dig-it.si/#ekipa'>o nas</a>
               </p>
               <p>
-                <a href='#reference'>reference</a>
+                <a href='https://dig-it.si/#reference'>reference</a>
               </p>
               <p>
-                <a href='#storitve'>storitve</a>
+                <a href='https://dig-it.si/#storitve'>storitve</a>
               </p>
             </div>
             <div>
               <p>
-                <a href='#ekipa'>ekipa</a>
+                <a href='https://dig-it.si/#ekipa'>ekipa</a>
               </p>
               <p>
                 {' '}
-                <a href='#mnenja-strank'>mnenja strank</a>
+                <a href='https://dig-it.si/#mnenja-strank'>mnenja strank</a>
               </p>
             </div>
           </div>
@@ -80,19 +90,39 @@ function Footer() {
                 target='blank'
                 className={classes.fb}
               >
-                <Image src='/fb-white.svg' alt='facebook social link icon' width={26} height={26} />
+                <Image
+                  src='/fb-white.svg'
+                  alt='facebook social link icon'
+                  width={26}
+                  height={26}
+                />
               </Link>
               <Link href='https://www.instagram.com/digitslo/' target='blank'>
-                <Image src='/Icon-instagram.svg' alt='instagram social link icon' width={26} height={26}/>
+                <Image
+                  src='/Icon-instagram.svg'
+                  alt='instagram social link icon'
+                  width={26}
+                  height={26}
+                />
               </Link>
               <Link
                 href='https://www.linkedin.com/company/di-git/'
                 target='blank'
               >
-                <Image src='/Icon-linkedin.svg' alt='linkedin social link icon' width={26} height={26} />
+                <Image
+                  src='/Icon-linkedin.svg'
+                  alt='linkedin social link icon'
+                  width={26}
+                  height={26}
+                />
               </Link>
               <Link href='https://www.tiktok.com/@digitagencija' target='blank'>
-                <Image src='/Icon-tiktok.svg' alt='tiktok social link icon' width={26} height={26}/>
+                <Image
+                  src='/Icon-tiktok.svg'
+                  alt='tiktok social link icon'
+                  width={26}
+                  height={26}
+                />
               </Link>
             </div>
             <Link href='/informativna-ponudba'>

@@ -12,13 +12,13 @@ const quicksand = Quicksand({
 import Head from 'next/head'
 import Squares from '../../components/helperFunctions/SquaresLanding'
 import { motion, AnimatePresence } from 'framer-motion'
-import toast, { Toaster } from "react-hot-toast";
-
+import toast, { Toaster } from 'react-hot-toast'
 
 function Page() {
   const [website, setWebsite] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
+  const [soglasam, setSoglasam] = useState('')
 
   const websiteInputHandler = (e) => {
     setWebsite(e.target.value)
@@ -31,13 +31,10 @@ function Page() {
   const phoneInputHandler = (e) => {
     setPhone(e.target.value)
   }
-  // const submitHandler = (e) => {
-  //   e.preventDefault()
-  //   console.log(website, email, phone)
-  //   setWebsite('')
-  //   setEmail('')
-  //   setPhone('')
-  // }
+
+  const soglasamHandler = (e) => {
+    setSoglasam(e.target.value)
+  }
 
   const dropIn = {
     hidden: {
@@ -63,37 +60,46 @@ function Page() {
       website: website,
       mail: email,
       tel: phone,
-    };
+      soglasam: soglasam,
+    }
 
     if (
-      sendMessage.website !== "" &&
-      sendMessage.mail !== "" &&
-      sendMessage.tel !== ""
+      sendMessage.website !== '' &&
+      sendMessage.mail !== '' &&
+      sendMessage.tel !== '' &&
+      sendMessage.soglasam !== ''
     ) {
-      const req = await fetch("/api/contact", {
+      const req = await fetch('/api/contact', {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
-        method: "post",
+        method: 'post',
         body: JSON.stringify(sendMessage),
-      });
+      })
 
-      const res = await req.json();
+      const res = await req.json()
 
-      console.log(res.status);
+      console.log(res.status)
 
       if (res) {
-        toast.success("Sporočilo je uspešno poslano!");
-        setEmail("");
-        setPhone("");
-        setWebsite("");
+        toast.success('Sporočilo je uspešno poslano!')
+        setEmail('')
+        setPhone('')
+        setWebsite('')
       } else {
-        toast.error("Prišlo je do napake.");
+        toast.error('Prišlo je do napake.')
       }
     } else {
-      toast.error("Prazna polja!");
+      if (
+        (sendMessage.website !== '' && sendMessage.mail !== '',
+        sendMessage.tel !== '')
+      ) {
+        toast.error('Soglasanje je obvezno')
+      } else {
+        toast.error('Prazna polja!')
+      }
     }
-  };
+  }
 
   return (
     <>
@@ -102,62 +108,70 @@ function Page() {
       </Head>
       <Toaster />
 
-    
-    <div className={`${classes.spletnaAnalizaSection} ${quicksand.className}`}>
-      <motion.div
-        className={classes.spletnAnalizaContainer}
-        variants={dropIn}
-        initial='hidden'
-        animate='visible'
-        exit='exit'
+      <div
+        className={`${classes.spletnaAnalizaSection} ${quicksand.className}`}
       >
-        <h1>Brezplačna spletna analiza</h1>
-        <h1>SPLETNEGA MESTA</h1>
-        <Squares />
+        <motion.div
+          className={classes.spletnAnalizaContainer}
+          variants={dropIn}
+          initial='hidden'
+          animate='visible'
+          exit='exit'
+        >
+          <h1>Brezplačna spletna analiza</h1>
+          <h1>SPLETNEGA MESTA</h1>
+          <Squares />
 
-        <div className={classes.textFormContainer}>
-          <div>
-            <p>
-              Za vas analiziramo najpomembnejše kazalnike uspešnosti v iskalniku
-              Google in vam podamo konkretne predloge za izboljševanje vaših
-              uvrstitev.
-            </p>
-          </div>
-
-          <form onSubmit={sendHandler}>
-            <input
-              type='text'
-              placeholder='naslov spletnega mesta'
-              onChange={websiteInputHandler}
-              value={website}
-            ></input>
-            <input
-              type='email'
-              placeholder='e-naslov'
-              onChange={emailInputHandler}
-              value={email}
-            ></input>
-            <input
-              type='tel'
-              placeholder='telefon'
-              onChange={phoneInputHandler}
-              value={phone}
-            ></input>
-            <div className={classes.checkboxContainer}>
-              <input type='checkbox' id='scales' name='scales' />
-              <span className={classes.checkmark}></span>
-
-              <label htmlFor='scales'>
-                S prijavo soglašam, da se moje navedene osebne podatke upravlja
-                in obdeluje podjetje Dig-IT d.o.o.
-              </label>
+          <div className={classes.textFormContainer}>
+            <div>
+              <p>
+                Za vas analiziramo najpomembnejše kazalnike uspešnosti v
+                iskalniku Google in vam podamo konkretne predloge za
+                izboljševanje vaših uvrstitev.
+              </p>
             </div>
 
-            <button className={classes.btn}>ŽELIM BREZPLAČNO ANALIZO</button>
-          </form>
-        </div>
-      </motion.div>
-    </div>
+            <form onSubmit={sendHandler}>
+              <input
+                type='text'
+                placeholder='naslov spletnega mesta'
+                onChange={websiteInputHandler}
+                value={website}
+              ></input>
+              <input
+                type='email'
+                placeholder='e-naslov'
+                onChange={emailInputHandler}
+                value={email}
+              ></input>
+              <input
+                type='tel'
+                placeholder='telefon'
+                onChange={phoneInputHandler}
+                value={phone}
+              ></input>
+              <div className={classes.checkboxContainer}>
+                <input
+                  type='checkbox'
+                  id='scales'
+                  name='scales'
+                  value='S prijavo soglašam, da se moje navedene osebne podatke
+                    upravlja in obdeluje podjetje Dig-IT d.o.o.'
+                  onChange={soglasamHandler}
+                />
+                <span className={classes.checkmark}></span>
+
+                <label htmlFor='scales'>
+                  S prijavo soglašam, da se moje navedene osebne podatke
+                  upravlja in obdeluje podjetje Dig-IT d.o.o.
+                </label>
+              </div>
+
+              <button className={classes.btn}>ŽELIM BREZPLAČNO ANALIZO</button>
+            </form>
+          </div>
+        </motion.div>
+      </div>
     </>
   )
 }
