@@ -5,11 +5,10 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  i18n: {
-    locales: ['sl', 'en', 'hr'],
-    defaultLocale: 'sl'
-  }
-  
+  // i18n: {
+  //   locales: ['sl', 'en', 'hr'],
+  //   defaultLocale: 'sl'
+  // }
 }
 
 module.exports = nextConfig
