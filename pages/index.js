@@ -32,7 +32,16 @@ const PageLayoutHolder = dynamic(() =>
 )
 
 
-export default function Home() {
+export function getStaticProps({locale}) {
+  return {
+    props: {
+      locale
+    }
+  }
+}
+
+
+export default function Home({locale}) {
   return (
     <>
       <Head>
@@ -55,7 +64,7 @@ export default function Home() {
       <Image src={Logo} alt='digit logo' priority={true} />
       <p>
         Z intenzivno spletno prisotnostjo, dvignemo prihodke vašega
-        podjetja.
+        podjetja.{locale}
       </p>
       <Link href='/informativna-ponudba'>
         <button className={`${styles.btn} ${styles.btnhite}`}>

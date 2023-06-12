@@ -53,7 +53,7 @@ function Footer() {
           <div className={classes.box1}>
             <div>
               <p>
-                <a href='#oNas'>o nas</a>
+                <a href='#ekipa'>o nas</a>
               </p>
               <p>
                 <a href='#reference'>reference</a>

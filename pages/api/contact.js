@@ -17,7 +17,7 @@ const main = async ( message ) => {
 
     const info = await transporter.sendMail({
         from: 'Dig-it Spletna Stran <niksa@dig-it.si>',
-        to: 'niksa@dig-it.si',
+        to: 'info@dig-it.si',
         subject: 'Novo sporočilo',
         html: htmlMessage,
     })
